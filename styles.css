@@ -20,7 +20,7 @@ article {
 }
 
 button {
-    background-colour: black;
+    background-color: black;
     color: white;
     border: none;
     padding: 10px 14px;
@@ -33,7 +33,7 @@ button:hover {
 }
 
 article {
-    backround-color: #f7f7f7
+    background-color: #f7f7f7
 }
 
 #clear-cart {

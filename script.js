@@ -22,4 +22,4 @@ const clearBtn = document.getElementById("clear-cart"); // selects the clear car
 clearBtn.addEventListener("click", function()) { //when the button is clicked, the function runs and everything inside the cart is cleared
     cart.innerHTML = ""; // to clear all items in cart
     console.log("Cart cleared!");
-}
+});
