@@ -18,3 +18,29 @@ article {
     padding: 10px;
     margin: 10px;
 }
+
+button {
+    background-colour: black;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover { 
+    background-color: darkgreen;
+}
+
+article {
+    backround-color: #f7f7f7
+}
+
+#clear-cart {
+    margin-top: 10px;
+    background-color: crimson;
+}
+
+#clear-cart:hover {
+    background-color: darkred;
+}
