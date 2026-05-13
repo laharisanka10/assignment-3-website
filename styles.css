@@ -39,21 +39,20 @@ article {
     width: 220px;
 }
 
-button {
+button,
+.button-link {
     background-color: black;
     color: white;
     border: none;
     padding: 10px 14px;
     border-radius: 6px;
     cursor: pointer;
+    display: inline-block;
 }
 
-button:hover { 
+button:hover
+.button-link:hover { 
     background-color: darkgreen;
-}
-
-article {
-    background-color: #f7f7f7
 }
 
 #clear-cart {
