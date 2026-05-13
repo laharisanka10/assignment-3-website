@@ -1,10 +1,16 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
 header {
     background: lightgrey;
     padding: 20px;
+}
+
+nav a {
+    margin-right: 15px;
+    color: black;
 }
 
 section {
