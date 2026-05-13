@@ -15,14 +15,28 @@ nav a {
 
 section {
     border: 2px solid black;
-    padding: 10px;
-    margin: 10px;
+    padding: 20px;
+    margin: 20px;
 }
+
+.introduction {
+    background-color: #f7f7f7;
+}
+
+.products,
+.info {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
 
 article {
     border: 2px solid black;
-    padding: 10px;
-    margin: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f7f7f7;
+    width: 220px;
 }
 
 button {
