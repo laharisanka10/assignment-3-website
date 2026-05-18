@@ -68,3 +68,34 @@ button:hover
 #clear-cart:hover {
     background-color: darkred;
 }
+
+.product-details {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.product-image-placeholder {
+    width: 18rem;
+    height: 18rem;
+    background-color: #eeeeee;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product.info {
+    max-width: 32rem;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.product-link {
+    display: block;
+    margin-top: 0.75rem;
+    color: black;
+}
