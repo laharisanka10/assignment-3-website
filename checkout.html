@@ -34,7 +34,21 @@
                 <label for="address">Delivery Address</label>
                 <textarea id="address" name="address" required></textarea>
 
-                <label
+                <label for="payment">Payment Method</label>
+                <select id="payment" name="payment" required>
+                    <option value="">Select an option</option>
+                    <option value="card">Card</option>
+                    <option value="paypal">Paypal</option>
+                    <option value="afterpay">Afterpay</option>
+                </select>
+
+                <button type="submit">Place Order</button>
+
+            </form>
         </section>
+
     </main>
+
 </body>
+
+</html>
