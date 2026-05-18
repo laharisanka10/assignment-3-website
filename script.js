@@ -19,7 +19,9 @@ buttons.forEach(function(button) { //loops through each button in the list
 
 const clearBtn = document.getElementById("clear-cart"); // selects the clear cart button
 
-clearBtn.addEventListener("click", function()) { //when the button is clicked, the function runs and everything inside the cart is cleared
-    cart.innerHTML = ""; // to clear all items in cart
-    console.log("Cart cleared!");
-});
+if (clearBtn) {
+    clearBtn.addEventListener("click", function()) {
+        cart.innerHTML = "";
+        console.log("Cart cleared!");
+    });
+}
