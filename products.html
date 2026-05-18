@@ -1,99 +1,72 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
-    <link rel=""stylesheet" href="styles.css">
-
-    <title>Calibrate Supplements</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Shop | Calibrate Supplements</title>
 </head>
-
 
 <body>
 
     <header>
-        <h1>Calibrate</h1>
+        <h1>Shop Supplements</h1>
 
-        <nav> //allows the user to move between pages
+        <!--  -->
+        <nav> //allows users to move between pages
             <a href="index.html">Home</a>
             <a href="products.html">Shop</a>
         </nav>
     </header>
 
-// main page content
-<main>
-// simple introduction of the Calibrate brand and message
-    <section class="introduction">
+    <main>
+        <section> //contains all products
+            <h2>Product List</h2>
+        
+        <div class="products"> //group all product cards together
 
-        <h2>Simple supplements for everyday wellbeing</h2>
-        <p>No decision fatigue. Just simple wellness products to support your daily routine.</p>
+            
+        <article>
+            <h3>Ashwagandha Pills</h3>
+                <p>$19.99</p>
+                <button class="add-btn" data-name="Ashwagandha Pills">Add to Cart</button>
+        </article>
 
-//create a button for users to go to the Products page
-        <a class="button-link" href="index.html">Products</a>
 
-    </section>
+        <article>
+            <h3>Creatine Sachets</h3>
+                <p>$16.99</p>
+                <button class="add-btn" data-name="Creatine Sachets">Add to Cart</button>
+        </article>
 
-//explains brand value
-    <section>
-        <h2>Why Calibrate?</h2>
 
-        <div class="info">
+        <article>
+            <h3>Probiotic Gummies</h3>
+                <p>$14.99</p>
+                <button class="add-btn" data-name="Probiotic Gummies">Add to Cart</button>
+        </article>
 
-            <article>
-                <h3>Simple choices</h3>
-                <p>No confusing labels. Just clear guidance.</p>
-            </article>
 
-            <article>
-                <h3>Everyday essentials</h3>
-                <p>Products for sleep, energy and recovery.</p>
-            </article>
+        <article>
+            <h3>Magnesium Glycinate</h3>
+                <p>$24.99</p>
+                <button class="add-btn" data-name="Magnesium Glycinate">Add to Cart</button>
+        </article>
+
         </div>
 
-    </section>
-</main>
+        </section>
+
+//cart section to show products added
+        <section>
+            <h2>Cart</h2>
+            <ul id="cart"></ul>
+            <button id="clear-cart">Clear Cart</button>
+        </section>
+        
+    </main>
+
+<script src="script.js"></script>
 
 </body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </html>

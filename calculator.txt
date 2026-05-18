@@ -1,0 +1,33 @@
+function calculateTotal(order) {
+    // 'order' is the array passed into the function
+
+    let totalCost = 0;
+    // start total cost at 0
+
+    let totalItems = 0;
+    // track total number of fruits (for discount later)
+
+    for (let item of order) {
+        // loop through each object in the array
+
+        totalCost += item.quantity * item.price;
+        // multiply quantity by price for this item
+        // add it to totalCost
+
+        totalItems += item.quantity;
+        // keep track of total number of fruits
+    }
+
+    // Apply discount (if more than 100 items)
+    if (totalItems > 100) {
+        totalCost = totalCost * 0.8;
+        // reduce total by 20% (multiply by 0.8)
+    }
+
+    // Add GST (10%)
+    totalCost = totalCost * 1.10;
+    // increase total by 10%
+
+    return totalCost;
+    // return final amount
+}
