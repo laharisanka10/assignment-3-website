@@ -95,8 +95,8 @@ button:hover
 }
 
 .product-link {
-    display: block;
-    margin-top: 0.75rem;
+    display: inline-block;
+    margin-top: 0.8rem;
     color: black;
 }
 
@@ -118,4 +118,24 @@ select {
 
 textarea {
     min-height: 6rem;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 30rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid #cccccc;
+    font-size: 1rem;
+}
+
+.goal-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.goal-buttons button {
+    background-color: #eaeaea;
+    color: black;
 }
