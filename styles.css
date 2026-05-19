@@ -138,3 +138,18 @@ textarea {
     background-color: #eaeaea;
     color: black;
 }
+
+/* ===== CONFIRMATION ===== */
+
+.confirmation-box {
+    max-width: 40rem;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.order-summary {
+    background-color: #f7f7f7;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0.75rem;
+}
