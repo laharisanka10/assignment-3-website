@@ -53,6 +53,12 @@ article:hover {
     transform: translateY(-4px);
 }
 
+button:hover,
+.button-link:hover,
+.product-link:hover {
+    opacity: 0.85;
+}
+
 button,
 .button-link {
     background-color: black;

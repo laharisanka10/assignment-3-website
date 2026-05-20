@@ -13,15 +13,17 @@ buttons.forEach(function(button) { //loops through each button in the list
         item.textContent = productName; // product name gets put inside the cart
 
         cart.appendChild(item); //adds item to the cart, this will be visible on the page now
-        console.log(productName + "added to cart") // confirms the item has been added to cart
+        console.log(productName + " added to cart") // confirms the item has been added to cart
     });
 });
 
 const clearBtn = document.getElementById("clear-cart"); // selects the clear cart button
 
 if (clearBtn) {
-    clearBtn.addEventListener("click", function()) {
+    clearBtn.addEventListener("click", function() {
+
         cart.innerHTML = "";
         console.log("Cart cleared!");
+
     });
 }
