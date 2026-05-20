@@ -181,3 +181,37 @@ textarea {
     margin-top: 1.5rem;
     padding-top: 1rem;
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+    
+    /* stacks intro section vertically on mobile*/
+    .introduction {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /*stacks product details vertically*/
+    .product-details {
+        flex-direction: column;
+    }
+
+    /*product cards take full screen width*/
+    article {
+        width: 100%;
+    }
+
+    /*top bar navigation spacing*/
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    /*stacks cart items vertically*/
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
