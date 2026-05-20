@@ -235,3 +235,8 @@ textarea {
         align-items: flex-start;
     }
 }
+
+.active-page {
+    font-weight: bold;
+    text-decoration: underline;
+}
