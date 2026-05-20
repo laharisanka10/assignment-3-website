@@ -48,10 +48,14 @@ button,
     background-color: black;
     color: white;
     border: none;
-    padding: 10px 14px;
-    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    border-radius: 0.4rem;
     cursor: pointer;
     display: inline-block;
+    text-decoration: none;
+
+    /* add animation for hover*/
+    trasnition: 0.2s ease;
 }
 
 button:hover
