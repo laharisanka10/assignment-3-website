@@ -4,11 +4,23 @@
     --secondary-color: #eaeaea;
     --background-color: #f7f7f7;
     --accent-color: #3B82F6;
+    --card-color: #ffffff;
+    --accent-light: #EAF2FF;
+    --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+main {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1.5rem
+
 }
 
 header {
@@ -74,9 +86,9 @@ button,
     transition: 0.2s ease;
 }
 
-button:hover
+button:hover,
 .button-link:hover { 
-    background-color: darkgreen;
+    background-color: var(--accent-color);
 }
 
 #clear-cart {
@@ -104,7 +116,7 @@ button:hover
     justify-content: center;
 }
 
-.product.info {
+.product-info {
     max-width: 32rem;
 }
 
