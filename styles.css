@@ -54,9 +54,9 @@ section {
 
 .products,
 .info {
-    display: flex;
+    display: grid;
     gap: 1rem
-    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr)
 }
 
 
@@ -65,9 +65,17 @@ article {
     padding: 1rem;
     margin: 0;
     background-color: #fbfbfd;
-    width: 220px;
     border-radius: 1rem;
     transition: 0.2s ease;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 16rem;
+}
+
+article button {
+    margin-top: auto;
+    width: fit-content;
 }
 
 article:hover {
