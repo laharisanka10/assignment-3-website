@@ -24,13 +24,15 @@ main {
 }
 
 header {
-    background: lightgrey;
-    padding: 20px;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
-    margin-right: 15px;
-    color: black;
+    margin-right: 1 rem;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 section {
