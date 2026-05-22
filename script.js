@@ -18,9 +18,6 @@ buttons.forEach(function(button) {
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
         alert(productName + " added to cart!");
-
-        cart.appendChild(item);
-        console.log(productName + " added to cart")
     });
 });
 
@@ -28,9 +25,7 @@ const clearBtn = document.getElementById("clear-cart");
 
 if (clearBtn) {
     clearBtn.addEventListener("click", function() {
-
-        cart.innerHTML = "";
-        console.log("Cart cleared!");
-
+        localStorage.removeItem("cartItems");
+        location.reload();
     });
 }
