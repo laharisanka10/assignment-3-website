@@ -134,9 +134,10 @@ button:hover,
 }
 
 .product-details {
-    display: flex;
+    display: grid;
     gap: 2rem;
-    align-items: flex-start;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
 }
 
 .product-image-placeholder {
@@ -151,7 +152,7 @@ button:hover,
 }
 
 .product-info {
-    max-width: 32rem;
+    max-width: 34rem;
 }
 
 .product-placeholder {
@@ -184,6 +185,23 @@ button:hover,
     border-radius: 0.75rem;
     padding: 0.5rem;
     box-sizing: border-box;
+}
+
+.product-detail-image {
+    width: 100%;
+    height: 24rem;
+    object-fit: contain;
+    background-color: var(--accent-light);
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.product-info .button-link,
+.product-info button {
+    margin-right: 0.75rem;
+    margin-top: 1rem;
 }
 
 .price {
