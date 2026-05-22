@@ -7,8 +7,7 @@ console.log(buttons); // returns a list of all buttons
 
 buttons.forEach(function(button) { //loops through each button in the list
     button.addEventListener("click", function() { // adding an event listener so that when the button is clicked, the function runs
-        const product = button.parentElement // finds the product card that the button belongs to
-        const productName = product.querySelector("h3").textContent // gets the product name from the h3 inside that card
+        const productName = button.dataset.name; // gets the product name from the h3 inside that card
         const item = document.createElement("li"); //creates a new list item (element, not yet visible but its just been created)
         item.textContent = productName; // product name gets put inside the cart
 
