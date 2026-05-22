@@ -198,10 +198,22 @@ button:hover,
     box-sizing: border-box;
 }
 
+
 .product-info .button-link,
 .product-info button {
+    min-height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    width: 9rem;
+    height: 3rem;
+    font-size: 1rem;
     margin-right: 0.75rem;
     margin-top: 1rem;
+    line-height: 1;
+    vertical-align: top;
 }
 
 .price {
