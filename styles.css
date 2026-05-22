@@ -176,6 +176,16 @@ button:hover,
     box-sizing: border-box
 }
 
+.product-list-image {
+    width: 7rem;
+    height: 7rem;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
 .price {
     font-size: 1.25rem;
     font-weight: bold;
