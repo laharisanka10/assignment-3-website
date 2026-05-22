@@ -1,22 +1,30 @@
 console.log("JS Connected");
 
-const cart = document.getElementById("cart"); //selects the cart from html using its ID, we can add new items from this
+let cartItems = JSONparse(localStorage.getItem("cartItems")) || [];
 
-const buttons = document.querySelectorAll(".add-btn"); // selects all buttons
-console.log(buttons); // returns a list of all buttons
+const buttons = document.querySelectorAll(".add-btn"); 
 
-buttons.forEach(function(button) { //loops through each button in the list
-    button.addEventListener("click", function() { // adding an event listener so that when the button is clicked, the function runs
-        const productName = button.dataset.name; // gets the product name from the h3 inside that card
-        const item = document.createElement("li"); //creates a new list item (element, not yet visible but its just been created)
-        item.textContent = productName; // product name gets put inside the cart
+buttons.forEach(function(button) { 
+    button.addEventListener("click", function() { 
+        const productName = button.dataset.name;
+        const productPrice = button.dataset.price;
+        
+        const product = {
+            name: productName,
+            price: productPrice
+        };
 
-        cart.appendChild(item); //adds item to the cart, this will be visible on the page now
-        console.log(productName + " added to cart") // confirms the item has been added to cart
+        cartItems.push(product);
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+        alert(productName + " added to cart!");
+
+        cart.appendChild(item);
+        console.log(productName + " added to cart")
     });
 });
 
-const clearBtn = document.getElementById("clear-cart"); // selects the clear cart button
+const clearBtn = document.getElementById("clear-cart");
 
 if (clearBtn) {
     clearBtn.addEventListener("click", function() {
