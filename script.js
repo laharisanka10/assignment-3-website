@@ -45,6 +45,10 @@ function displayCartItems(containerId) {
     }
 }
 
+displayCartItems("cart-list");
+displayCartItems("checkout-list");
+displayCartItems("confirmation-list");
+
 const clearBtn = document.getElementById("clear-cart");
 
 if (clearBtn) {
