@@ -27,6 +27,20 @@ header {
     background-color: white;
     padding: 1rem 2rem;
     border-bottom: 1px solid var(--border-color);
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-search {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    max-width: 28rem;
+    width: 100%;
+
 }
 
 nav a {
