@@ -1,6 +1,6 @@
 console.log("JS Connected");
 
-let cartItems = JSONparse(localStorage.getItem("cartItems")) || [];
+let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
 const buttons = document.querySelectorAll(".add-btn"); 
 
@@ -17,7 +17,7 @@ buttons.forEach(function(button) {
         cartItems.push(product);
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
-        alert(productName + " added to cart!");
+        displayCartItems("cart-list");
     });
 });
 
