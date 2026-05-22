@@ -21,6 +21,30 @@ buttons.forEach(function(button) {
     });
 });
 
+function displayCartItems(containerId) {
+    const container = document.getElementById(containerId);
+
+    if(container) {
+        container.innerHTML = "";
+
+        cartItems.forEach(function(item) {
+            const cartItem = document.createElememt("div");
+            cartItem.classList.add("cart-item");
+
+            //used AI help for this//
+            cartItem.innerHTML = `
+                <div>
+                    <h3>${item.name}</h3>
+                    <p>Quantity: 1</p>
+                </div>
+                <p>$${item.price}</p>
+            `;
+
+            container.appendChild(cartItem);
+        });
+    }
+}
+
 const clearBtn = document.getElementById("clear-cart");
 
 if (clearBtn) {
