@@ -28,7 +28,7 @@ function displayCartItems(containerId) {
         container.innerHTML = "";
 
         cartItems.forEach(function(item) {
-            const cartItem = document.createElememt("div");
+            const cartItem = document.createElement("div");
             cartItem.classList.add("cart-item");
 
             //used AI help for this//
