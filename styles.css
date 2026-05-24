@@ -36,7 +36,7 @@ header {
 
 header h1 {
     font-size: 1.8rem;
-    margin: 0
+    margin: 0;
 }
 
 .nav-search {
@@ -68,6 +68,10 @@ section {
     box-shadow: var(--shadow);
 }
 
+section h2 {
+    margin-bottom: 1.5rem;
+}
+
 .introduction {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -88,7 +92,13 @@ section {
 }
 
 .introduction .button-link {
-    width: 14rem;
+    width: 16rem;
+    text-align: center;
+    border-radius: 0.6rem;
+}
+
+.products {
+    padding-top: 1rem;
 }
 
 .products,
@@ -117,9 +127,14 @@ article {
 article button {
     grid-column: 3;
     grid-row: 2;
+
     width: 2rem;
     height: 2rem;
+
     border-radius: 50%;
+    background-color: #e0e0e0;
+    color: #666666;
+
     padding: 0;
     font-size: 0;
     justify-self: end;
@@ -127,13 +142,14 @@ article button {
 
 article button::after {
     content: "+";
-    font-size: 1.3rem;
-    color: white;
+    font-size: 1.2rem;
+    color: #666666;
 }
 
 article:hover {
     /*adds subtle lift animation*/
-    transform: translateY(-4px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
 article h3 {
@@ -152,6 +168,16 @@ article p:nth-of-type(2) {
     font-weight: bold;
     color: var(--primary-color);
     align-self: start;
+}
+
+article p:nth-of-type(2) {
+    min-width: 4rem;
+    text-align: right;
+}
+
+article p:first-of-type {
+    max-width: 12rem;
+    line-height: 1.4;
 }
 
 button:hover,
@@ -318,8 +344,13 @@ textarea {
 }
 
 .goal-buttons button {
-    background-color: #eaeaea;
-    color: black;
+    background-color: #f1f1f1;
+    color: #555555;
+
+    border-radius: 999px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 /* ===== CONFIRMATION ===== */
