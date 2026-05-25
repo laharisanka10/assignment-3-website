@@ -148,28 +148,6 @@ article {
     min-height: 7.5rem;
 }
 
-article button {
-    grid-column: 3;
-    grid-row: 2;
-
-    width: 2rem;
-    height: 2rem;
-
-    border-radius: 50%;
-    background-color: #e0e0e0;
-    color: #666666;
-
-    padding: 0;
-    font-size: 0;
-    justify-self: end;
-}
-
-article button::after {
-    content: "+";
-    font-size: 1.2rem;
-    color: #666666;
-}
-
 article:hover {
     /*adds subtle lift animation*/
     transform: translateY(-3px);
@@ -597,12 +575,12 @@ textarea {
 
 .product-card {
     display: grid;
-    grid-template-columns: 7.5rem 1fr 4.5rem;
+    grid-template-columns: 7rem 1fr 4rem;
     grid-template-rows: auto 1fr auto;
     column-gap: 1rem;
     row-gap: 0.35rem;
 
-    height: 8.5rem;
+    height: 10rem;
     padding: 1rem;
 
     background-color: #f7f7fb;
@@ -616,8 +594,8 @@ textarea {
     grid-column: 1;
     grid-row: 1 / 4;
 
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 7rem;
+    height: 7rem;
 
     object-fit: contain;
     align-self: start;
@@ -670,10 +648,11 @@ textarea {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: end;
+    align-self: end
 }
 
 .product-card .product-link {
-    margin: 0;
+    margin: 0 0 0.15rem 0;
     color: black;
     justify-self: start;
 }
@@ -682,22 +661,27 @@ textarea {
     width: 2rem;
     height: 2rem;
 
+    grid-column: auto;
+    grid-row: auto;
+
+    justify-self: end;
+    align-self: end;
+
     border-radius: 50%;
     border: 1px solid #999999;
     background-color: white;
 
-    font-size: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 
     padding: 0;
     margin: 0;
+    font-size: 0;
 }
 
 .product-card .circle-button::after {
     content: "+";
     font-size: 1.4rem;
-    line-height: 1;
     color: #777777;
 }
