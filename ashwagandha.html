@@ -9,49 +9,130 @@
 <body>
 
     <header>
-        <h1>Calibrate Supplements</h1>
+        <h1>Calibrate</h1>
+        
+        <div class="search-wrapper">
+            <span>🔍</span>
+            <input class="nav-search" type="text" placeholder="Search">
+        </div>
 
         <nav>
             <a href="index.html">Home</a>
-            <a href="products.html">Shop</a>
-            <a href="cart.html">Cart</a>
+            <a href="products.html">Products</a>
+            <a href="#">My Plan</a>
+            <a class="cart-icon" href="cart.html" aria-label="Cart">🛒</a>
         </nav>
     </header>
 
     <main>
 
+        <p class="breadcrumbs">
+            Products > Sleep > Best Seller
+        </p>
+
         <section class="product-details">
 
-            <img class="product-detail-image" src="images/ashwagandha.png" alt="Ashwagandha Pills">
+            <div class="product-gallery">
+                <img class="product-detail-image" src="images/ashwagandha.png" alt="Ashwagandha Pills">
+
+                <div class="image-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
 
             <div class="product-info">
-                <h2>Ashwagandha Pills</h2>
-                <p class=""price>$19.99</p>
+                <div class="product-title-row">
+                    <h2>Ashwagandha Pills</h2>
+                    <p class="price">$19.99</p>
+                </div>
 
                 <p>
                     A daily supplement designed to support stress management, relaxation and general wellbeing.
                 </p>
 
-                <h3>Product Details</h3>
+                <hr>
 
-                <ul>
-                    <li>60 capsules per bottle</li>
-                    <li>Designed for daily use, for up to 6 weeks at a time</li>
-                    <li>Made with Ayurvedic and natural ingredients</li>
-                </ul>
+                <div class="quantity-row">
+                    <span>Quantity:</span>
+                    <button type="button" class="quantity-btn">-</button>
+                    <span>1</span>
+                    <button type="button" class="quantity-btn">+</button>
+                </div>
 
-                <button class="add-btn" data-name="Ashwagandha Pills" data-price="19.99">Add to Cart</button>
+                <button class="add-btn product-main-button" data-name="Ashwagandha Pills" data-price="19.99">🛒 Add to Cart</button>
+
+                <button type="button" class="wishlist-button">+ Add to Wishlist</button>
+
                 
-                <a class="button-link" href="cart.html">View Cart</a>
+                <div class="product-accordion">
+                    <details>
+                        <summary>Product Details</summary>
+                        <p>Supports relaxation, stress management and general wellbeing</p>
+                    </details>
+
+                    <details>
+                        <summary>Instructions for Usage</summary>
+                        <p>Take one capsule daily with water, preferably with food</p>
+                    </details>
+
+                    <details>
+                        <summary>Shipping & Returns</summary>
+                        <p>Orders are shipped within 3-5 business days. Returns accepted for unopened products</p>
+                    </details>
+                </div>
             </div>
         </section>
 
+        <hr>
+
         <section>
-            <h2>Cart</h2>
-            <div id="cart-list"></div>
-            <button id="clear-cart">Clear Cart</button>
+            <h2>You may also like</h2>
+
+            <div class="products">
+                <article class="home-product-card">
+                <img class="product-card-image" src="images/probiotichomepage.png" alt="Probiotic Gummies">
+
+                <h3>Probiotic Gummies</h3>
+                <p>Supports digestion and gut health</p>
+                <p>$14.99</p>
+
+                <button class="add-btn" data-name="Probiotic Gummies" data-price="14.99">
+                    Add to Cart
+                </button>
+    
+            </article>
+
+            <article class="home-product-card">
+                <img class="product-card-image" src="images/ashwagandhahomepage.png" alt="Ashwagandha Pills">
+
+                <h3>Ashwagandha Pills</h3>
+                <p>Helps manage stress levels</p>
+                <p>$19.99</p>
+
+                <button class="add-btn" data-name="Ashwagandha Pills" data-price="19.99">
+                    Add to Cart
+                </button>
+            
+            </article>
+
+            <article class="home-product-card">
+                <img class="product-card-image" src="images/creatinehomepage.png" alt="Creatine Sachets">
+
+                <h3>Creatine Sachets</h3>
+                <p>Supports focus and muscle recovery</p>
+                <p>$14.99</p>
+                <button class="add-btn" data-name="Creatine Sachets" data-price="16.99">
+                    Add to Cart
+                </button>
+            
+            </article>
+            
+            </div>
         </section>
 
+    
     </main>
 
     <script src="script.js"></script>
