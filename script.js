@@ -8,10 +8,17 @@ buttons.forEach(function(button) {
     button.addEventListener("click", function() { 
         const productName = button.dataset.name;
         const productPrice = button.dataset.price;
+
+        const quantityInput = document.querySelector("quantity-input");
+        let quantity = 1;
+        if (quantityInput) {
+            quantity = Number(quantityInput.value);
+        }
         
         const product = {
             name: productName,
             price: productPrice
+            quantity: quantity
         };
 
         cartItems.push(product);
@@ -56,4 +63,21 @@ if (clearBtn) {
         localStorage.removeItem("cartItems");
         location.reload();
     });
+}
+
+const minusBtn = document.querySelector("minus-btn");
+const plusBtn = document.querySelector("plus-btn");
+const quantityInput = document.querySelector("quantity-input");
+
+if (minusBtn && plusBtn && quantityInput) {
+
+    plusBtn.addEventListener("click", function() {
+        quantityInput.value = Number(quantityInput.value) + 1;
+    });
+
+    minusBtn.addEventListener("click", function() {
+        if(Number(quantityInput.value) > 1) {
+            quantityInput.value = Number(quantityInput.value) - 1;
+        }
+    }); 
 }

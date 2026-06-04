@@ -218,10 +218,10 @@ button:hover,
 
 .product-details {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: start;
     grid-template-columns: 1fr 1fr;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
 }
 
 .product-image-placeholder {
@@ -241,7 +241,7 @@ button:hover,
 
 .product-info h2 {
     margin-top: 0;
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
 .product-info p {
@@ -278,7 +278,7 @@ button:hover,
 
 .product-detail-image {
     width: 100%;
-    height: 20rem;
+    height: 26rem;
     object-fit: contain;
     background-color: #f7f7fb;
     border-radius: 1rem;
@@ -289,7 +289,8 @@ button:hover,
 
 
 .product-info .button-link,
-.product-info button {
+.product-info .product-main-button,
+.product-info .wishlist-button {
     min-height: 3rem;
     display: inline-flex;
     align-items: center;
@@ -315,7 +316,7 @@ button:hover,
 }
 
 .price {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -589,15 +590,16 @@ textarea {
 /* === PRODUCT SPECIFIC PAGE === */
 
 .product-accordion {
-    margin-top: 2rem;
+    margin-top: 1.4rem;
 }
 
 .product-gallery {
     text-align: center;
+    max-width: 30rem;
 }
 
 .image-dots {
-    margin-top: 0.75rem;
+    margin-top: 0.4rem;
 }
 
 .image-dots span {
@@ -616,32 +618,59 @@ textarea {
     gap: 2rem;
 }
 
+.product-title-row h2,
+.product-title-row .price {
+    margin: 0;
+    line-height: 1.2
+}
+
 .quantity-row {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin: 1.2rem 0;
+    gap: 0.35rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.quantity-number {
+    min-width: 1rem;
+    text-align: center;
 }
 
 .quantity-btn {
-    width: 1.7rem;
-    height: 1.7rem;
-    border-radius: 50%;
+    width: 1.4rem;
+    height: 1.4rem;
+    min-height: 0;
+
     padding: 0;
+    margin: 0;
+
+    border-radius: 0.4rem;
+    border: 1px solid #999999;
+
     background-color: white;
     color: #111111;
-    border: 1px solid #999999;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.quantity-btn:focus {
+    outline: none;
 }
 
 .product-main-button {
-    width: 16rem;
+    width: 13rem;
     background-color: #111111;
     border-radius: 2rem;
     margin-bottom: 0.75rem;
 }
 
 .wishlist-button {
-    width: 16rem;
+    width: 13rem;
     background-color: #777777;
     border-radius: 2rem;
     display: block;
@@ -651,7 +680,7 @@ textarea {
     background-color: #f7f7fb;
     border: 1px solid var(--border-color);
     border-radius: 0.4rem;
-    padding: 0.75rem 1rem;
+    padding: 0.45rem 1rem;
     margin-bottom: 0.5rem;
 }
 
