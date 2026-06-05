@@ -631,6 +631,13 @@ textarea {
     margin: 1rem 0 1rem 0;
 }
 
+.quantity-input {
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+
+}
+
 .quantity-number {
     min-width: 1rem;
     text-align: center;

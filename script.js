@@ -9,15 +9,15 @@ buttons.forEach(function(button) {
         const productName = button.dataset.name;
         const productPrice = button.dataset.price;
 
-        const quantityInput = document.querySelector("quantity-input");
+        const quantityInputBox = document.querySelector(".quantity-input");
         let quantity = 1;
-        if (quantityInput) {
-            quantity = Number(quantityInput.value);
+        if (quantityInputBox) {
+            quantity = Number(quantityInputBox.value);
         }
         
         const product = {
             name: productName,
-            price: productPrice
+            price: productPrice,
             quantity: quantity
         };
 
@@ -42,7 +42,7 @@ function displayCartItems(containerId) {
             cartItem.innerHTML = `
                 <div>
                     <h3>${item.name}</h3>
-                    <p>Quantity: 1</p>
+                    <p>Quantity: ${item.quantity}</p>
                 </div>
                 <p>$${item.price}</p>
             `;
@@ -65,19 +65,19 @@ if (clearBtn) {
     });
 }
 
-const minusBtn = document.querySelector("minus-btn");
-const plusBtn = document.querySelector("plus-btn");
-const quantityInput = document.querySelector("quantity-input");
+const minusBtn = document.querySelector(".minus-btn");
+const plusBtn = document.querySelector(".plus-btn");
+const quantityInputBox = document.querySelector(".quantity-input");
 
-if (minusBtn && plusBtn && quantityInput) {
+if (minusBtn && plusBtn && quantityInputBox) {
 
     plusBtn.addEventListener("click", function() {
-        quantityInput.value = Number(quantityInput.value) + 1;
+        quantityInputBox.value = Number(quantityInputBox.value) + 1;
     });
 
     minusBtn.addEventListener("click", function() {
-        if(Number(quantityInput.value) > 1) {
-            quantityInput.value = Number(quantityInput.value) - 1;
+        if(Number(quantityInputBox.value) > 1) {
+            quantityInputBox.value = Number(quantityInputBox.value) - 1;
         }
     }); 
 }
