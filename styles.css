@@ -116,7 +116,7 @@ section h2 {
     position: absolute;
     left: 16px;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
     color: #999;
 }
 
@@ -209,7 +209,9 @@ button:hover,
 
 #clear-cart {
     margin-top: 10px;
-    background-color: crimson;
+    width: 12rem;
+    background-color: black;
+    color: white;
 }
 
 #clear-cart:hover {
@@ -227,7 +229,7 @@ button:hover,
 .product-image-placeholder {
     width: 18rem;
     height: 18rem;
-    background-color: linear-gradient(135deg; #ffffff, #e8eef7);
+    background: linear-gradient(135deg; #ffffff, #e8eef7);
     border: 1px solid var(--border-color);
     border-radius: 1rem;
     display: flex;
@@ -255,7 +257,7 @@ button:hover,
 
 .product-placeholder {
     height: 8rem;
-    background-color: linear-gradient(135deg; #ffffff, #e8eef7);
+    background: linear-gradient(135deg; #ffffff, #e8eef7);
     border: 1px solid var(--border-color);
     border-radius: 0.75rem;
     margin-bottom: 1rem;
@@ -396,6 +398,7 @@ textarea {
 
 .cart-item {
     display: flex;
+    gap: 2rem;
     justify-content: space-between;
     align-items: center;
     background-color: #f7f7f7;
@@ -403,6 +406,44 @@ textarea {
     margin-bottom: 1rem;
     border-radius: 0.75rem;
     border: 1px solid #cccccc;
+}
+
+.cart-item-image {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-price {
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.cart-quantity-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart-minus,
+.cart-plus {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+}
+
+.cart-remove {
+    margin-left: 1rem;
 }
 
 .cart-item h3 {
@@ -414,6 +455,50 @@ textarea {
     margin-top: 1.5rem;
     padding-top: 1rem;
 }
+
+.cart-action-button,
+.checkout-button,
+#clear-cart {
+    width: 12rem;
+    height: 3rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+
+    vertical align: top;
+
+}
+
+.cart-action-button {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.checkout-button {
+    background-color: #777777;
+    color: white;
+}
+
+#clear-cart {
+    background-color: black;
+    color: white;
+    margin: 0;
+    position: relative;
+    top: -1px;
+}
+
+.cart-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
 
 /* ===== RESPONSIVE DESIGN ===== */
 
