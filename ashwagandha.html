@@ -61,7 +61,7 @@
                     <button type="button" class="quantity-btn plus-btn">+</button>
                 </div>
 
-                <button class="add-btn product-main-button" data-name="Ashwagandha Pills" data-price="19.99">🛒 Add to Cart</button>
+                <button class="add-btn product-main-button" data-name="Ashwagandha Pills" data-price="19.99" data-image="images/ashwagandha.png">🛒 Add to Cart</button>
 
                 <button type="button" class="wishlist-button">+ Add to Wishlist</button>
 
@@ -98,7 +98,7 @@
                 <p>Supports digestion and gut health</p>
                 <p>$14.99</p>
 
-                <button class="add-btn" data-name="Probiotic Gummies" data-price="14.99">
+                <button class="add-btn" data-name="Probiotic Gummies" data-price="14.99" data-image="images/probiotic.png">
                     Add to Cart
                 </button>
     
@@ -111,7 +111,7 @@
                 <p>Supports immunity and nutrient absorption</p>
                 <p>$12.99</p>
 
-                <button class="add-btn" data-name="Greens Powder" data-price="12.99">
+                <button class="add-btn" data-name="Greens Powder" data-price="12.99" data-image="images/greens.png">
                     Add to Cart
                 </button>
             
@@ -123,7 +123,7 @@
                 <h3>Creatine Sachets</h3>
                 <p>Supports focus and muscle recovery</p>
                 <p>$14.99</p>
-                <button class="add-btn" data-name="Creatine Sachets" data-price="16.99">
+                <button class="add-btn" data-name="Creatine Sachets" data-price="16.99" data-image="images/creatine.png">
                     Add to Cart
                 </button>
             
@@ -134,6 +134,14 @@
 
     
     </main>
+
+    <aside id="pop-up-cart" class="pop-up-cart">
+        <button id="collapse-pop-up-cart" class="collapse-pop-up-cart">x</button>
+        <h2>Your Cart</h2>
+        <div id="pop-up-cart-list"></div>
+        <a class="button-link pop-up-cart-button" href="cart.html">View Cart</a>
+        <button id="clear-pop-up-cart" class="clear-pop-up-cart">Clear Cart</button>
+    </aside>
 
     <script src="script.js"></script>
 

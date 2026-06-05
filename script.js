@@ -15,16 +15,21 @@ buttons.forEach(function(button) {
             quantity = Number(quantityInputBox.value);
         }
         
+        const productImage = button.dataset.image;
+        
         const product = {
             name: productName,
             price: productPrice,
-            quantity: quantity
+            quantity: quantity,
+            image: productImage
         };
 
         cartItems.push(product);
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
         displayCartItems("cart-list");
+        displayPopUpCart();
+        openPopUpCart();
     });
 });
 
@@ -65,6 +70,22 @@ if (clearBtn) {
     });
 }
 
+const clearPopUpCart = document.getElementById("clear-pop-up-cart");
+
+if (clearPopUpCart) {
+    clearPopUpCart.addEventListener("click", function() {
+        localStorage.removeItem("cartItems");
+        cartItems = [];
+        displayPopUpCart();
+        displayCartItems("cart-list");
+    });
+}
+
+
+
+
+
+
 const minusBtn = document.querySelector(".minus-btn");
 const plusBtn = document.querySelector(".plus-btn");
 const quantityInputBox = document.querySelector(".quantity-input");
@@ -81,3 +102,62 @@ if (minusBtn && plusBtn && quantityInputBox) {
         }
     }); 
 }
+
+function displayPopUpCart() {
+    const popUpCartList = document.getElementById("pop-up-cart-list");
+
+    if (popUpCartList) {
+        popUpCartList.innerHTML = "";
+
+        cartItems.forEach(function(item) {
+            const popUpItem = document.createElement("div");
+            popUpItem.classList.add("pop-up-cart-item");
+
+            popUpItem.innerHTML = `
+            <img src="${item.image}" alt = "${item.name}">
+            <div>
+               <h3>${item.name}</h3>
+               <p>Quantity: ${item.quantity}</p>
+               <p>$${item.price}</p>
+            </div>
+            <button class="remove-pop-up-item" data-index="${cartItems.indexOf(item)}">x</button>
+        `;
+
+        popUpCartList.appendChild(popUpItem);
+    
+    });
+    
+    const removeButtons = document.querySelectorAll(".remove-pop-up-item");
+
+        removeButtons.forEach(function(removeButton) {
+            removeButton.addEventListener("click", function() {
+                const index = removeButton.dataset.index;
+                cartItems.splice(index, 1);
+                localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                displayPopUpCart();
+                displayCartItems("cart-list");
+            });
+        })
+}
+}
+
+function openPopUpCart() {
+    const popUpCart = document.getElementById("pop-up-cart");
+
+    if (popUpCart) {
+        popUpCart.classList.add("open");
+        document.body.classList.add("cart-open");
+    }
+}
+
+const collapsePopUpCart = document.getElementById("collapse-pop-up-cart");
+
+    if (collapsePopUpCart) {
+        collapsePopUpCart.addEventListener("click", function() {
+            document.getElementById("pop-up-cart").classList.remove("open");
+            document.body.classList.remove("cart-open");
+        });
+    }
+
+displayPopUpCart();
+
