@@ -26,12 +26,68 @@
             <a class="cart-icon" href="cart.html" aria-label="Cart">🛒</a>
         </nav>
     </header>
+    
+    <section class="scrolling-banner">
+        
+        <div class="scrolling-track">
+            <span>🌿 NATURAL INGREDIENTS</span><span>|</span>
+            
+            <span>🧪 SCIENCE BACKED</span><span>|</span>
+            
+            <span>⚡ DAILY PERFORMANCE</span><span>|</span>
+            
+            <span>💚 HOLISTIC WELLBEING</span><span>|</span>
+            
+            <span>🌿 NATURAL INGREDIENTS</span><span>|</span>
+            
+            <span>🧪 SCIENCE BACKED</span><span>|</span>
+            
+            <span>⚡ DAILY PERFORMANCE</span><span>|</span>
+            
+            <span>💚 HOLISTIC WELLBEING</span><span>|</span>
 
+            <span>🌿 NATURAL INGREDIENTS</span><span>|</span>
+            
+            <span>🧪 SCIENCE BACKED</span><span>|</span>
+            
+            <span>⚡ DAILY PERFORMANCE</span><span>|</span>
+
+            <span>💚 HOLISTIC WELLBEING</span><span>|</span>
+
+            <span>🌿 NATURAL INGREDIENTS</span><span>|</span>
+            
+            <span>🧪 SCIENCE BACKED</span><span>|</span>
+            
+            <span>⚡ DAILY PERFORMANCE</span><span>|</span>           
+        </div>
+    
+    </section>
 
 <main>
 
-    <section class="introduction">
-        <!--left side content-->
+    <section class="brand-hero">
+        
+        <div class="brand-hero-content">
+            
+            <h2>Nature Builds The Raw Materials.</h2>
+            
+            <h2 class="hero-subheading">Calibrate Refines Them.</h2>
+            
+            <p>Modern life can disrupt sleep, recovery, digestion and energy levels. 
+            Calibrate combines carefully selected ingredients with evidence-based 
+            formulations to support overall wellbeing and daily performance.</p>
+            
+            <a class="button-link" href="products.html">Shop Supplements</a>
+        
+        </div>
+        
+        <div class="brand-hero-image">
+            <img id="hero-image" src="images/ashwagandhahomepage.png" alt="Calibrate Supplements">
+        </div>
+    
+    </section>
+
+     <section class="introduction">
         <div>
             <h2>Find My Personalised Plan</h2>
 
@@ -46,70 +102,37 @@
         <!--right side image placeholder-->
         <img class="home-image" src="images/homepage.png" alt="Calibrate Products">
     </section>
-
-    <!--explore by goal section-->
-    <section>
-
-        <h2> Explore by Goal</h2>
-
-        <div class="goal-buttons">
-
-            <button>Sleep</button>
-            <button>Gut Health</button>
-            <button>Energy</button>
-        </div>
-
-    </section>
-
-    <!--recommended products section-->
-    <section>
-
-        <h2>Best Sellers</h2>
-
-        <!--product card container-->
-        <div class="products">
-
-            <article class="home-product-card">
-                <img class="product-card-image" src="images/probiotichomepage.png" alt="Probiotic Gummies">
-
-                <h3>Probiotic Gummies</h3>
-                <p>Supports digestion and gut health</p>
-                <p>$14.99</p>
-
-                <button class="add-btn" data-name="Probiotic Gummies" data-price="14.99" data-image="images/probiotichomepage.png">
-                    +
-                </button>
     
-            </article>
-
-            <article class="home-product-card">
-                <img class="product-card-image" src="images/ashwagandhahomepage.png" alt="Ashwagandha Pills">
-
-                <h3>Ashwagandha Pills</h3>
-                <p>Helps manage stress levels</p>
-                <p>$19.99</p>
-
-                <button class="add-btn" data-name="Ashwagandha Pills" data-price="19.99" data-image="images/ashwagandhahomepage.png">
-                    +
-                </button>
+        <!--bestsellers-->
+    <section class="product-list-section">
+        
+        <h2>Best Sellers</h2>
+        
+        <div class="home-products">
             
-            </article>
+        <article class="home-product-card" onclick="window.location.href='ashwagandha.html'">
+            <img class="product-card-image" src="images/ashwagandhahomepage.png" alt="Ashwagandha Pills">  
+            <h3>Ashwagandha Pills</h3>
+            <p>Supports relaxation and stress management</p>
+            <p>$19.99</p>
+            <button class="add-btn" onclick="event.stopPropagation()" data-name="Ashwagandha Pills" data-price="19.99" data-image="images/ashwagandha.png">+</button>
+        </article>
 
-            <article class="home-product-card">
-                <img class="product-card-image" src="images/creatinehomepage.png" alt="Creatine Sachets">
+        <article class="home-product-card" onclick="window.location.href='creatine.html'">
+            <img class="product-card-image" src="images/creatinehomepage.png" alt="Creatine Sachets">
+            <h3>Creatine Sachets</h3>
+            <p>Enhances brain function and muscle recovery</p>
+            <p>$16.99</p>
+            <button class="add-btn" onclick="event.stopPropagation()" data-name="Creatine Sachets" data-price="16.99" data-image="images/creatine.png">+</button>
+        </article>
 
-                <h3>Creatine Sachets</h3>
-                <p>Supports focus and muscle recovery</p>
-                <p>$14.99</p>
-                <button class="add-btn" data-name="Creatine Sachets" data-price="16.99" data-image="images/creatinehomepage.png">
-                    +
-                </button>
-            
-            </article>
-
-        </div>
-
-    </section>
+        <article class="home-product-card" onclick="window.location.href='greens.html'">
+            <img class="product-card-image" src="images/greens.png" alt="Greens Powder">
+            <h3>Greens Powder</h3>
+            <p>Supports immunity and overall wellbeing</p>
+            <p>$12.99</p>
+            <button class="add-btn" onclick="event.stopPropagation()" data-name="Greens Powder" data-price="12.99" data-image="images/greens.png">+</button>
+        </article>
 
 </main>
 

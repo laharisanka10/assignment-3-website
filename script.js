@@ -256,3 +256,29 @@ const collapsePopUpCart = document.getElementById("collapse-pop-up-cart");
 
 displayPopUpCart();
 
+//homepage hero section 
+const heroImage = document.getElementById("hero-image");
+
+if (heroImage) {
+
+    const heroImages = [
+        "images/ashwagandhahomepage.png",
+        "images/creatinehomepage.png",
+        "images/probiotichomepage.png",
+        "images/greens.png"
+    ];
+
+    let currentImage = 0;
+
+    setInterval(function () {
+
+        currentImage++;
+
+        if (currentImage >= heroImages.length) {
+            currentImage = 0;
+        }
+
+        heroImage.src = heroImages[currentImage];
+
+    }, 3000);
+}
