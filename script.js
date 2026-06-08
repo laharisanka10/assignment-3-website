@@ -282,3 +282,105 @@ if (heroImage) {
 
     }, 3000);
 }
+
+//personalised plan form page
+const planForm = document.getElementById("plan-form");
+
+if (planForm) {
+
+    planForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const goal = document.querySelector('input[name="goal"]:checked');
+        const exercise = document.querySelector('input[name="exercise"]:checked');
+        const concern = document.querySelector('input[name="concern"]:checked');
+        const lifestyle = document.querySelector('input[name="lifestyle"]:checked');
+
+        const result = document.getElementById("result"); //used some AI help for this
+
+        if (!goal || !exercise || !concern || !lifestyle) {
+
+            result.innerHTML = `
+                <div class="recommendation-card">
+                    <h2>Please answer all questions</h2>
+                </div>
+            `;
+
+            return;
+        }
+
+        let productName = "";
+        let productImage = "";
+        let productLink = "";
+        let productDescription = "";
+
+        if (goal.value === "sleep") {
+
+            productName = "Ashwagandha Pills";
+            productImage = "images/ashwagandhahomepage.png";
+            productLink = "ashwagandha.html";
+            productDescription =
+                "Supports relaxation, stress management and healthy sleep routines.";
+
+        }
+
+        else if (goal.value === "gut") {
+
+            productName = "Probiotic Gummies";
+            productImage = "images/probiotichomepage.png";
+            productLink = "probiotic.html";
+            productDescription =
+                "Supports digestion, gut health and overall wellbeing.";
+
+        }
+
+        else if (goal.value === "energy" && exercise.value === "high") {
+
+            productName = "Creatine Sachets";
+            productImage = "images/creatinehomepage.png";
+            productLink = "creatine.html";
+            productDescription =
+                "Supports muscle recovery, strength and daily performance.";
+
+        }
+
+        else {
+
+            productName = "Greens Powder";
+            productImage = "images/greens.png";
+            productLink = "greens.html";
+            productDescription =
+                "Supports energy, immunity and nutrient intake.";
+
+        }
+
+        result.innerHTML = `
+
+            <div class="recommendation-card">
+
+                <h2>Your Recommended Product</h2>
+
+                <img
+                    src="${productImage}"
+                    alt="${productName}">
+
+                <h3>${productName}</h3>
+
+                <p>${productDescription}</p>
+
+                <a class="button-link" href="${productLink}">
+                    View Product
+                </a>
+
+            </div>
+
+        `;
+
+        result.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    });
+
+}
