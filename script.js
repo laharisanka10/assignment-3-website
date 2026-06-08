@@ -165,16 +165,6 @@ displayCartItems("cart-list");
 displayCartItems("checkout-list");
 displayCartItems("confirmation-list");
 
-const clearBtn = document.getElementById("clear-cart");
-
-if (clearBtn) {
-    clearBtn.addEventListener("click", function() {
-        localStorage.removeItem("cartItems");
-        cartItems = [];
-        location.reload();
-    });
-}
-
 const clearPopUpCart = document.getElementById("clear-pop-up-cart");
 
 if (clearPopUpCart) {
