@@ -3,6 +3,10 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-details.css">
+    <link rel="stylesheet" href="popup-cart.css">
+    <link rel="stylesheet" href="responsive.css">
+    
     <title>Calibrate | Creatine Sachets</title>
 </head>
 
@@ -33,7 +37,7 @@
         <section class="product-details">
 
             <div class="product-gallery">
-                <img class="product-detail-image" src="images/creatine.png" alt="Creatine Sachets">
+                <img id="product-image" class="product-detail-image" src="images/creatine1.png" alt="Creatine Sachets">
 
                 <div class="image-dots">
                     <span></span>
@@ -60,8 +64,9 @@
                     <input type="number" value="1" min="1" class="quantity-input">
                     <button type="button" class="quantity-btn plus-btn">+</button>
                 </div>
-
-                <button class="add-btn product-main-button" data-name="Creatine Sachets" data-price="16.99" data-image="images/creatine.png">🛒 Add to Cart</button>
+                
+                <button class="add-btn product-main-button" data-name="Creatine Sachets" data-price="16.99" data-image="images/creatine1.png">
+                    <img class="button-cart-icon" src="images/cart.svg" alt="Cart">Add to Cart</button>
 
                 
                 <div class="product-accordion">
@@ -89,27 +94,27 @@
             <h2>You may also like</h2>
 
             <div class="products">
-                <article class="home-product-card">
-                <img class="product-card-image" src="images/probiotichomepage.png" alt="Probiotic Gummies">
+                <article class="home-product-card" onclick="window.location.href='probiotic.html'">
+                <img class="product-card-image" src="images/probiotic.png" alt="Probiotic Gummies">
 
                 <h3>Probiotic Gummies</h3>
                 <p>Supports digestion and gut health</p>
                 <p>$14.99</p>
 
-                <button class="add-btn" data-name="Probiotic Gummies" data-price="14.99" data-image="images/probiotic.png">
+                <button class="add-btn" onclick="event.stopPropagation()" data-name="Probiotic Gummies" data-price="14.99" data-image="images/probiotic.png">
                     Add to Cart
                 </button>
     
             </article>
 
-            <article class="home-product-card">
-                <img class="product-card-image" src="images/ashwagandhahomepage.png" alt="Ashwagandha Pills">
+            <article class="home-product-card" onclick="window.location.href='ashwagandha.html'">
+                <img class="product-card-image" src="images/ashwagandha.png" alt="Ashwagandha Pills">
 
                 <h3>Ashwagandha Pills</h3>
                 <p>Helps manage stress levels</p>
                 <p>$19.99</p>
 
-                <button class="add-btn" data-name="Ashwagandha Pills" data-price="19.99" data-image="images/ashwagandha.png">
+                <button class="add-btn" onclick="event.stopPropagation()" data-name="Ashwagandha Pills" data-price="19.99" data-image="images/ashwagandha.png">
                     Add to Cart
                 </button>
             
@@ -120,6 +125,14 @@
 
     
     </main>
+    
+    <aside id="pop-up-cart" class="pop-up-cart">
+        <button id="collapse-pop-up-cart" class="collapse-pop-up-cart">x</button>
+        <h2>Your Cart</h2>
+        <div id="pop-up-cart-list"></div>
+        <a class="button-link pop-up-cart-button" href="cart.html">View Cart</a>
+        <button id="clear-pop-up-cart" class="clear-pop-up-cart">Clear Cart</button>
+    </aside>
 
     <script src="script.js"></script>
 

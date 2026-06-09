@@ -1,0 +1,99 @@
+/* ===== POP-UP CART ===== */
+
+.pop-up-cart {
+    position: fixed;
+    top: 0;
+    right: -22rem;
+    width: 22rem;
+    height: 100vh;
+
+    background-color: white;
+    border-left: 1px solid var(--border-color);
+    box-shadow: -4px 0 14px rgba(0, 0, 0, 0.12);
+
+    padding: 1.5rem;
+    box-sizing: border-box;
+
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.pop-up-cart.open {
+    right: 0
+}
+
+.close-pop-up-cart {
+    background-color: transparent;
+    color: black;
+    font-size: 1.5rem;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.pop-up-cart-item {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+
+    background-color: #f7f7fb;
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.pop-up-cart-item img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: contain;
+}
+
+.pop-up-cart-item h3 {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.pop-up-cart-item p {
+    font-size: 0.8rem;
+    margin: 0.2rem 0;
+}
+
+.pop-up-cart-button,
+.clear-pop-up-cart {
+    margin-top: 0.75rem;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body.cart-open main,
+body.cart-open header {
+    width: calc(100% - 22rem);
+    margin-left: 0;
+    transform: none;
+    transition: 0.3s ease;
+}
+
+main,
+header {
+    transition: 0.3s ease;
+}
+
+.clear-pop-up-cart {
+    background-color: black;
+    color: white;
+}
+
+.clear-pop-up-cart:hover {
+    background-color: darkred;
+}
+
+.remove-pop-up-item {
+    background: transparent;
+    color: #777777;
+    padding: 0;
+    margin-left: auto;
+    font-size: 1.2rem;
+    border: none;
+}

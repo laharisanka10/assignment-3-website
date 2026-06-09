@@ -1,0 +1,43 @@
+/* ===== PLAN PAGE - FORM ===== */
+#plan-form {
+    margin-top: 2rem;
+}
+
+#plan-form label {
+    display: block;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+}
+
+#plan-form h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#result {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: #f7f7f7;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.recommendation-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.recommendation-card img {
+    width: 10rem;
+    margin: 1rem 0;
+}

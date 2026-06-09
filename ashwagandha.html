@@ -3,6 +3,10 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-details.css">
+    <link rel="stylesheet" href="popup-cart.css">
+    <link rel="stylesheet" href="responsive.css">
+    
     <title>Calibrate | Ashwagandha Pills</title>
 </head>
 
@@ -33,7 +37,7 @@
         <section class="product-details">
 
             <div class="product-gallery">
-                <img class="product-detail-image" src="images/ashwagandha.png" alt="Ashwagandha Pills">
+                <img id="product-image" class="product-detail-image" src="images/ashwagandha1.png" alt="Ashwagandha Pills">
 
                 <div class="image-dots">
                     <span></span>
@@ -60,9 +64,9 @@
                     <input type="number" value="1" min="1" class="quantity-input">
                     <button type="button" class="quantity-btn plus-btn">+</button>
                 </div>
-
-                <button class="add-btn product-main-button" data-name="Ashwagandha Pills" data-price="19.99" data-image="images/ashwagandha.png">🛒 Add to Cart</button>
-
+                
+                <button class="add-btn product-main-button" data-name="Ashwagandha Pills" data-price="19.99" data-image="images/ashwagandha1.png">
+                    <img class="button-cart-icon" src="images/cart.svg" alt="Cart">Add to Cart</button>
                 
                 <div class="product-accordion">
                     <details>
@@ -89,27 +93,27 @@
             <h2>You may also like</h2>
 
             <div class="products">
-                <article class="home-product-card">
-                <img class="product-card-image" src="images/probiotichomepage.png" alt="Probiotic Gummies">
+                <article class="home-product-card" onclick="window.location.href='probiotic.html'">
+                <img class="product-card-image" src="images/probiotic.png" alt="Probiotic Gummies">
 
                 <h3>Probiotic Gummies</h3>
                 <p>Supports digestion and gut health</p>
                 <p>$14.99</p>
 
-                <button class="add-btn" data-name="Probiotic Gummies" data-price="14.99" data-image="images/probiotic.png">
+                <button class="add-btn" onclick="event.stopPropagation()" data-name="Probiotic Gummies" data-price="14.99" data-image="images/probiotic.png">
                     Add to Cart
                 </button>
     
             </article>
 
-            <article class="home-product-card">
+            <article class="home-product-card" onclick="window.location.href='greens.html'">
                 <img class="product-card-image" src="images/greens.png" alt="Greens Powder">
 
                 <h3>Greens Powder</h3>
                 <p>Supports immunity and nutrient absorption</p>
                 <p>$12.99</p>
 
-                <button class="add-btn" data-name="Greens Powder" data-price="12.99" data-image="images/greens.png">
+                <button class="add-btn" onclick="event.stopPropagation()" data-name="Greens Powder" data-price="12.99" data-image="images/greens.png">
                     Add to Cart
                 </button>
             

@@ -262,9 +262,9 @@ const heroImage = document.getElementById("hero-image");
 if (heroImage) {
 
     const heroImages = [
-        "images/ashwagandhahomepage.png",
-        "images/creatinehomepage.png",
-        "images/probiotichomepage.png",
+        "images/ashwagandha.png",
+        "images/creatine.png",
+        "images/probiotic.png",
         "images/greens.png"
     ];
 
@@ -318,7 +318,7 @@ if (planForm) {
         if (goal.value === "sleep") {
 
             productName = "Ashwagandha Pills";
-            productImage = "images/ashwagandhahomepage.png";
+            productImage = "images/ashwagandha.png";
             productLink = "ashwagandha.html";
             productDescription =
                 "Supports relaxation, stress management and healthy sleep routines.";
@@ -328,7 +328,7 @@ if (planForm) {
         else if (goal.value === "gut") {
 
             productName = "Probiotic Gummies";
-            productImage = "images/probiotichomepage.png";
+            productImage = "images/probiotic.png";
             productLink = "probiotic.html";
             productDescription =
                 "Supports digestion, gut health and overall wellbeing.";
@@ -338,7 +338,7 @@ if (planForm) {
         else if (goal.value === "energy" && exercise.value === "high") {
 
             productName = "Creatine Sachets";
-            productImage = "images/creatinehomepage.png";
+            productImage = "images/creatine.png";
             productLink = "creatine.html";
             productDescription =
                 "Supports muscle recovery, strength and daily performance.";
@@ -382,5 +382,75 @@ if (planForm) {
         });
 
     });
+
+}
+
+//image gallery in product pages
+const productImage = document.getElementById("product-image");
+
+if (productImage) {
+
+    let images = [];
+
+    if (window.location.pathname.includes("ashwagandha")) {
+
+        images = [
+            "images/ashwagandha1.png",
+            "images/ashwagandha2.png",
+            "images/ashwagandha3.png"
+        ];
+
+    } 
+    
+    else if (window.location.pathname.includes("creatine")) {
+
+        images = [
+            "images/creatine1.png",
+            "images/creatine2.png",
+            "images/creatine3.png"
+        ];
+
+    } 
+    
+    else if (window.location.pathname.includes("probiotic")) {
+
+        images = [
+            "images/gummies1.png",
+            "images/gummies2.png",
+            "images/gummies3.png"
+        ];
+
+    } 
+    
+    else if (window.location.pathname.includes("greens")) {
+
+        images = [
+            "images/greens1.png",
+            "images/greens2.png"
+        ];
+
+    }
+
+    let currentImage = 0;
+
+    setInterval(function() {
+
+        productImage.style.opacity = 0;
+
+        setTimeout(function() {
+
+            currentImage++;
+
+            if (currentImage >= images.length) {
+                currentImage = 0;
+            }
+
+            productImage.src = images[currentImage];
+
+            productImage.style.opacity = 1;
+
+        }, 500);
+
+    }, 5000);
 
 }
